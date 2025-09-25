@@ -1,5 +1,5 @@
 locations:
-- code_source:
-    package_name: dagster_quickstart.definitions
-  working_directory: ./src/
-  location_name: my-project
+  - location_name: dagster_quickstart
+    code_source:
+      module_name: dagster_quickstart.definitions
+    working_directory: ./src/
