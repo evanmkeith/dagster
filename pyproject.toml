@@ -5,13 +5,13 @@ version = "0.1.0"
 dependencies = [
     "dagster==1.11.11",
     "pandas>=2.3.2",
+    "dagster-cloud>=1.11.11",
 ]
 
 [dependency-groups]
 dev = [
     "dagster-webserver",
     "dagster-dg-cli",
-    "dagster_cloud"
 ]
 
 [build-system]
