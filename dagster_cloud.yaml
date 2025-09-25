@@ -1,5 +1,5 @@
 locations:
   - location_name: dagster_quickstart
     code_source:
-      python_file: dagster_quickstart.defs.assets
+      python_file: dagster_quickstart.defs.assets.py
     working_directory: ./src/
