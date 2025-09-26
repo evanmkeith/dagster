@@ -1,5 +1,5 @@
 locations:
   - location_name: dagster_quickstart
     code_source:
-      module_name: dagster_quickstart.defs.assets
+      module_name: dagster_quickstart.defs
     working_directory: ./src/
