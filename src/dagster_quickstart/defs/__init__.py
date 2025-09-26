@@ -1,1 +1,1 @@
-
+from .assets import *
