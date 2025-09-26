@@ -11,7 +11,7 @@ sample_data_file = current_dir / "data" / "sample_data.csv"
 processed_data_file = current_dir / "data" / "processed_data.csv"
 
 @dg.asset
-def processed_data():
+def processed_data_test():
     """Process sample data by adding age groups."""
     # Read data from the CSV
     df = pd.read_csv(sample_data_file)
