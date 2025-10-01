@@ -6,6 +6,8 @@ dependencies = [
     "dagster==1.11.11",
     "pandas>=2.3.2",
     "dagster-cloud>=1.11.11",
+    "dagster-webserver>=1.11.11",
+    "dagster-dg-cli>=1.11.11",
 ]
 
 [dependency-groups]
