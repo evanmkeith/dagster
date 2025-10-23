@@ -585,25 +585,25 @@ daily_backfill_job = define_asset_job(
     description="Backfill daily transaction data"
 )
 
-# Job for multi-dimensional backfilling
+# Job for multi-dimensional backfilling (Date x Region)
 multi_dimensional_backfill_job = define_asset_job(
     name="multi_dimensional_backfill_job", 
-    selection=AssetSelection.assets(daily_regional_sales, complex_sales_analysis),
-    description="Backfill multi-dimensional partitioned assets"
+    selection=[daily_regional_sales],  # Single multi-dimensional asset
+    description="Backfill daily regional sales (Date x Region partitions)"
 )
 
-# Job for static partition backfilling
+# Job for static partition backfilling (regions only)
 static_backfill_job = define_asset_job(
     name="static_backfill_job",
-    selection=AssetSelection.assets(regional_sales_performance, category_performance),
-    description="Process all static partitions (regions, categories)"
+    selection=[regional_sales_performance],  # Single static partition type
+    description="Process regional sales performance static partitions"
 )
 
-# Comprehensive backfill job
+# Daily partitioned backfill job
 full_backfill_job = define_asset_job(
     name="comprehensive_backfill_job",
-    selection=AssetSelection.groups("time_partitioned", "geographic_partitioned", "product_partitioned", "multi_dimensional"),
-    description="Comprehensive backfill across all partition types"
+    selection=[daily_transactions],  # Only select assets with compatible partitions
+    description="Daily partitioned asset backfill"
 )
 
 

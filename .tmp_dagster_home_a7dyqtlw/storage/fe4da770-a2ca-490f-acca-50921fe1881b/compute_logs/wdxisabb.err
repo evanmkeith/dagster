@@ -1,0 +1,8 @@
+2025-10-23 11:11:14 -0700 - dagster - DEBUG - analytics_refresh - fe4da770-a2ca-490f-acca-50921fe1881b - 63185 - LOGS_CAPTURED - Started capturing logs in process (pid: 63185).
+2025-10-23 11:11:14 -0700 - dagster - DEBUG - analytics_refresh - fe4da770-a2ca-490f-acca-50921fe1881b - 63185 - check_data_quality - STEP_START - Started execution of step "check_data_quality".
+2025-10-23 11:11:14 -0700 - dagster - INFO - analytics_refresh - fe4da770-a2ca-490f-acca-50921fe1881b - check_data_quality - 📊 Data quality metrics: {'completeness': 0.95, 'accuracy': 0.87, 'timeliness': 0.92, 'consistency': 0.88}
+2025-10-23 11:11:14 -0700 - dagster - INFO - analytics_refresh - fe4da770-a2ca-490f-acca-50921fe1881b - check_data_quality - 📈 Overall quality score: 90.50%
+2025-10-23 11:11:14 -0700 - dagster - DEBUG - analytics_refresh - fe4da770-a2ca-490f-acca-50921fe1881b - 63185 - check_data_quality - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-10-23 11:11:14 -0700 - dagster - DEBUG - analytics_refresh - fe4da770-a2ca-490f-acca-50921fe1881b - check_data_quality - Writing file at: /Users/evankeith/Documents/Dagster_Test_Instances/dagster-quickstart/.tmp_dagster_home_a7dyqtlw/storage/fe4da770-a2ca-490f-acca-50921fe1881b/check_data_quality/result using PickledObjectFilesystemIOManager...
+2025-10-23 11:11:14 -0700 - dagster - DEBUG - analytics_refresh - fe4da770-a2ca-490f-acca-50921fe1881b - 63185 - check_data_quality - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-10-23 11:11:14 -0700 - dagster - DEBUG - analytics_refresh - fe4da770-a2ca-490f-acca-50921fe1881b - 63185 - check_data_quality - STEP_SUCCESS - Finished execution of step "check_data_quality" in 9.9ms.

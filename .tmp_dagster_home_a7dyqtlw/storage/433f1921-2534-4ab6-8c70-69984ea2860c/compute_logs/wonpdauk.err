@@ -1,0 +1,7 @@
+2025-10-23 11:13:26 -0700 - dagster - DEBUG - file_processing - 433f1921-2534-4ab6-8c70-69984ea2860c - 64256 - LOGS_CAPTURED - Started capturing logs in process (pid: 64256).
+2025-10-23 11:13:26 -0700 - dagster - DEBUG - file_processing - 433f1921-2534-4ab6-8c70-69984ea2860c - 64256 - send_notification - STEP_START - Started execution of step "send_notification".
+2025-10-23 11:13:26 -0700 - dagster - INFO - file_processing - 433f1921-2534-4ab6-8c70-69984ea2860c - send_notification - 📢 Sending info priority notification: File processing completed
+2025-10-23 11:13:26 -0700 - dagster - DEBUG - file_processing - 433f1921-2534-4ab6-8c70-69984ea2860c - 64256 - send_notification - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-10-23 11:13:26 -0700 - dagster - DEBUG - file_processing - 433f1921-2534-4ab6-8c70-69984ea2860c - send_notification - Writing file at: /Users/evankeith/Documents/Dagster_Test_Instances/dagster-quickstart/.tmp_dagster_home_a7dyqtlw/storage/433f1921-2534-4ab6-8c70-69984ea2860c/send_notification/result using PickledObjectFilesystemIOManager...
+2025-10-23 11:13:26 -0700 - dagster - DEBUG - file_processing - 433f1921-2534-4ab6-8c70-69984ea2860c - 64256 - send_notification - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-10-23 11:13:26 -0700 - dagster - DEBUG - file_processing - 433f1921-2534-4ab6-8c70-69984ea2860c - 64256 - send_notification - STEP_SUCCESS - Finished execution of step "send_notification" in 8.78ms.
