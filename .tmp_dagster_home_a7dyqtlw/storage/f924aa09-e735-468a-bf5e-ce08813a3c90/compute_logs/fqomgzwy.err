@@ -1,0 +1,8 @@
+2025-10-23 11:28:03 -0700 - dagster - DEBUG - analytics_refresh - f924aa09-e735-468a-bf5e-ce08813a3c90 - 73724 - LOGS_CAPTURED - Started capturing logs in process (pid: 73724).
+2025-10-23 11:28:03 -0700 - dagster - DEBUG - analytics_refresh - f924aa09-e735-468a-bf5e-ce08813a3c90 - 73724 - check_data_quality - STEP_START - Started execution of step "check_data_quality".
+2025-10-23 11:28:03 -0700 - dagster - INFO - analytics_refresh - f924aa09-e735-468a-bf5e-ce08813a3c90 - check_data_quality - 📊 Data quality metrics: {'completeness': 0.95, 'accuracy': 0.87, 'timeliness': 0.92, 'consistency': 0.88}
+2025-10-23 11:28:03 -0700 - dagster - INFO - analytics_refresh - f924aa09-e735-468a-bf5e-ce08813a3c90 - check_data_quality - 📈 Overall quality score: 90.50%
+2025-10-23 11:28:03 -0700 - dagster - DEBUG - analytics_refresh - f924aa09-e735-468a-bf5e-ce08813a3c90 - 73724 - check_data_quality - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-10-23 11:28:03 -0700 - dagster - DEBUG - analytics_refresh - f924aa09-e735-468a-bf5e-ce08813a3c90 - check_data_quality - Writing file at: /Users/evankeith/Documents/Dagster_Test_Instances/dagster-quickstart/.tmp_dagster_home_a7dyqtlw/storage/f924aa09-e735-468a-bf5e-ce08813a3c90/check_data_quality/result using PickledObjectFilesystemIOManager...
+2025-10-23 11:28:03 -0700 - dagster - DEBUG - analytics_refresh - f924aa09-e735-468a-bf5e-ce08813a3c90 - 73724 - check_data_quality - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-10-23 11:28:03 -0700 - dagster - DEBUG - analytics_refresh - f924aa09-e735-468a-bf5e-ce08813a3c90 - 73724 - check_data_quality - STEP_SUCCESS - Finished execution of step "check_data_quality" in 15ms.

@@ -1,0 +1,8 @@
+[32m2025-10-23 11:39:19 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 86aff3d0-8b6b-48df-836d-e3d109a502bf - 87020 - LOGS_CAPTURED - Started capturing logs in process (pid: 87020).
+[32m2025-10-23 11:39:19 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 86aff3d0-8b6b-48df-836d-e3d109a502bf - 87020 - hourly_traffic - STEP_START - Started execution of step "hourly_traffic".
+[32m2025-10-23 11:39:19 -0700[0m - dagster - [34mINFO[0m - __ASSET_JOB - 86aff3d0-8b6b-48df-836d-e3d109a502bf - hourly_traffic - Processing traffic for hour: 2024-01-29-08:00
+[32m2025-10-23 11:39:19 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 86aff3d0-8b6b-48df-836d-e3d109a502bf - 87020 - hourly_traffic - STEP_OUTPUT - Yielded output "result" of type "Dict[String,Any]". (Type check passed).
+[32m2025-10-23 11:39:19 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 86aff3d0-8b6b-48df-836d-e3d109a502bf - hourly_traffic - Writing file at: /Users/evankeith/Documents/Dagster_Test_Instances/dagster-quickstart/.tmp_dagster_home_3cct1hr0/storage/hourly_traffic/2024-01-29-08:00 using PickledObjectFilesystemIOManager...
+[32m2025-10-23 11:39:19 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 86aff3d0-8b6b-48df-836d-e3d109a502bf - 87020 - hourly_traffic - ASSET_MATERIALIZATION - Materialized value hourly_traffic.
+[32m2025-10-23 11:39:19 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 86aff3d0-8b6b-48df-836d-e3d109a502bf - 87020 - hourly_traffic - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-10-23 11:39:19 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 86aff3d0-8b6b-48df-836d-e3d109a502bf - 87020 - hourly_traffic - STEP_SUCCESS - Finished execution of step "hourly_traffic" in 43ms.

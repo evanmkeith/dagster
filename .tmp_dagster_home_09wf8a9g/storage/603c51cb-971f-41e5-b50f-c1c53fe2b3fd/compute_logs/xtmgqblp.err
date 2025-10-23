@@ -1,0 +1,7 @@
+2025-10-23 11:53:44 -0700 - dagster - DEBUG - configurable_alert_job - 603c51cb-971f-41e5-b50f-c1c53fe2b3fd - 493 - LOGS_CAPTURED - Started capturing logs in process (pid: 493).
+2025-10-23 11:53:44 -0700 - dagster - DEBUG - configurable_alert_job - 603c51cb-971f-41e5-b50f-c1c53fe2b3fd - 493 - send_notification - STEP_START - Started execution of step "send_notification".
+2025-10-23 11:53:44 -0700 - dagster - INFO - configurable_alert_job - 603c51cb-971f-41e5-b50f-c1c53fe2b3fd - send_notification - 📢 Sending high priority notification: Alert handled successfully
+2025-10-23 11:53:44 -0700 - dagster - DEBUG - configurable_alert_job - 603c51cb-971f-41e5-b50f-c1c53fe2b3fd - 493 - send_notification - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-10-23 11:53:44 -0700 - dagster - DEBUG - configurable_alert_job - 603c51cb-971f-41e5-b50f-c1c53fe2b3fd - send_notification - Writing file at: /Users/evankeith/Documents/Dagster_Test_Instances/dagster-quickstart/.tmp_dagster_home_09wf8a9g/storage/603c51cb-971f-41e5-b50f-c1c53fe2b3fd/send_notification/result using PickledObjectFilesystemIOManager...
+2025-10-23 11:53:44 -0700 - dagster - DEBUG - configurable_alert_job - 603c51cb-971f-41e5-b50f-c1c53fe2b3fd - 493 - send_notification - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-10-23 11:53:44 -0700 - dagster - DEBUG - configurable_alert_job - 603c51cb-971f-41e5-b50f-c1c53fe2b3fd - 493 - send_notification - STEP_SUCCESS - Finished execution of step "send_notification" in 11ms.

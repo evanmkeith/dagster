@@ -471,7 +471,7 @@ class AlertConfig(Config):
     default_status=DefaultSensorStatus.RUNNING,
     description="Configurable sensor for various alert conditions"
 )
-def configurable_alert_sensor(context: SensorEvaluationContext, config: AlertConfig):
+def configurable_alert_sensor(context: SensorEvaluationContext, config: AlertConfig = AlertConfig()):
     """Configurable sensor for different alert conditions"""
     
     # Simulate checking various metrics

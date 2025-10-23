@@ -67,6 +67,9 @@ from .resources import (
     advanced_api_client, enhanced_slack
 )
 
+# Import dbt assets
+from .dbt_assets import dbt_assets_list, dbt_resources
+
 # Collect all assets
 all_assets = [
     # Basic serverless assets
@@ -87,7 +90,7 @@ all_assets = [
     
     # External assets
     external_stripe_data, external_salesforce_data
-]
+] + dbt_assets_list  # Add dbt assets
 
 # Collect all asset checks (excluding ones that reference multi-asset outputs)
 all_asset_checks = [
@@ -142,6 +145,9 @@ all_resources = {
     "redis_cache_manager": redis_cache_manager,
     "advanced_api_client": advanced_api_client,
     "enhanced_slack": enhanced_slack,
+    
+    # Add dbt resources
+    **dbt_resources
 }
 
 # Main definitions - single Definitions object for dg dev compatibility

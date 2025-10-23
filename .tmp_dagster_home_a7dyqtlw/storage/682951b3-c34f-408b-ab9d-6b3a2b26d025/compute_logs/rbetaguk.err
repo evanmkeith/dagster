@@ -1,0 +1,7 @@
+2025-10-23 11:27:33 -0700 - dagster - DEBUG - analytics_refresh - 682951b3-c34f-408b-ab9d-6b3a2b26d025 - 73116 - LOGS_CAPTURED - Started capturing logs in process (pid: 73116).
+2025-10-23 11:27:33 -0700 - dagster - DEBUG - analytics_refresh - 682951b3-c34f-408b-ab9d-6b3a2b26d025 - 73116 - send_notification - STEP_START - Started execution of step "send_notification".
+2025-10-23 11:27:33 -0700 - dagster - INFO - analytics_refresh - 682951b3-c34f-408b-ab9d-6b3a2b26d025 - send_notification - 📢 Sending info priority notification: Analytics refresh completed
+2025-10-23 11:27:33 -0700 - dagster - DEBUG - analytics_refresh - 682951b3-c34f-408b-ab9d-6b3a2b26d025 - 73116 - send_notification - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-10-23 11:27:33 -0700 - dagster - DEBUG - analytics_refresh - 682951b3-c34f-408b-ab9d-6b3a2b26d025 - send_notification - Writing file at: /Users/evankeith/Documents/Dagster_Test_Instances/dagster-quickstart/.tmp_dagster_home_a7dyqtlw/storage/682951b3-c34f-408b-ab9d-6b3a2b26d025/send_notification/result using PickledObjectFilesystemIOManager...
+2025-10-23 11:27:33 -0700 - dagster - DEBUG - analytics_refresh - 682951b3-c34f-408b-ab9d-6b3a2b26d025 - 73116 - send_notification - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-10-23 11:27:33 -0700 - dagster - DEBUG - analytics_refresh - 682951b3-c34f-408b-ab9d-6b3a2b26d025 - 73116 - send_notification - STEP_SUCCESS - Finished execution of step "send_notification" in 12ms.
