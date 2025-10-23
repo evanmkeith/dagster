@@ -618,24 +618,24 @@ daily_processing_schedule = build_schedule_from_partitioned_job(
     description="Daily processing of transaction data"
 )
 
-# Weekly batch processing
-@dg.schedule(
-    job_name="weekly_batch_processing",
-    cron_schedule="0 6 * * 1",  # Monday 6 AM
-    description="Weekly batch processing for time-sensitive partitions"
-)
-def weekly_batch_schedule(context: ScheduleEvaluationContext):
-    """Schedule for weekly batch processing"""
-    # Process last week's data
-    last_week = context.scheduled_execution_time - timedelta(days=7)
-    
-    return dg.RunConfig(
-        tags={
-            "batch_type": "weekly",
-            "processing_week": last_week.strftime("%Y-W%U"),
-            "scheduled_time": context.scheduled_execution_time.isoformat()
-        }
-    )
+# Weekly batch processing - commented out as corresponding job doesn't exist
+# @dg.schedule(
+#     job_name="weekly_batch_processing",
+#     cron_schedule="0 6 * * 1",  # Monday 6 AM
+#     description="Weekly batch processing for time-sensitive partitions"
+# )
+# def weekly_batch_schedule(context: ScheduleEvaluationContext):
+#     """Schedule for weekly batch processing"""
+#     # Process last week's data
+#     last_week = context.scheduled_execution_time - timedelta(days=7)
+#     
+#     return dg.RunConfig(
+#         tags={
+#             "batch_type": "weekly",
+#             "processing_week": last_week.strftime("%Y-W%U"),
+#             "scheduled_time": context.scheduled_execution_time.isoformat()
+#         }
+#     )
 
 
 # ============================================================================

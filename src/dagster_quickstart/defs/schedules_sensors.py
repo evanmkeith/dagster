@@ -61,11 +61,11 @@ def monthly_reporting_schedule(context):
 # Partitioned asset schedule
 daily_sales_schedule = build_schedule_from_partitioned_job(
     job=dg.define_asset_job(
-        "daily_sales_job",
+        "scheduled_daily_sales_job",
         selection=[daily_sales],
         partitions_def=daily_partitions
     ),
-    name="daily_sales_schedule",
+    name="daily_sales_schedule", 
     description="Process daily sales data for each partition"
 )
 
@@ -278,8 +278,10 @@ def analytics_refresh_sensor(context: SensorEvaluationContext):
 )
 def send_notification(context: OpExecutionContext):
     """Send notification op for various workflows"""
-    message = context.op_config["message"]
-    priority = context.op_config["priority"]
+    # Provide defaults if config not available
+    config = getattr(context, 'op_config', {})
+    message = config.get("message", "Demo notification message")
+    priority = config.get("priority", "info")
     
     context.log.info(f"📢 Sending {priority} priority notification: {message}")
     
@@ -317,9 +319,18 @@ def check_data_quality(context: OpExecutionContext):
 
 
 @job(
-    name="daily_data_refresh",
+    name="daily_data_refresh", 
     description="Daily refresh of customer and order data",
-    config=RunConfig()
+    config=RunConfig(
+        ops={
+            "send_notification": {
+                "config": {
+                    "message": "Daily data refresh completed",
+                    "priority": "info"
+                }
+            }
+        }
+    )
 )
 def daily_data_refresh_job():
     """Job to refresh daily data"""
@@ -330,7 +341,16 @@ def daily_data_refresh_job():
 @job(
     name="business_reporting",
     description="Generate business reports",
-    config=RunConfig()
+    config=RunConfig(
+        ops={
+            "send_notification": {
+                "config": {
+                    "message": "Business reports generated successfully",
+                    "priority": "info"
+                }
+            }
+        }
+    )
 )
 def business_reporting_job():
     """Job for business reporting"""
@@ -340,7 +360,16 @@ def business_reporting_job():
 @job(
     name="data_quality_check", 
     description="Check data quality and send alerts if needed",
-    config=RunConfig()
+    config=RunConfig(
+        ops={
+            "send_notification": {
+                "config": {
+                    "message": "Data quality check completed",
+                    "priority": "warning"
+                }
+            }
+        }
+    )
 )
 def data_quality_check_job():
     """Job triggered by data quality sensor"""
@@ -351,7 +380,16 @@ def data_quality_check_job():
 @job(
     name="file_processing",
     description="Process newly arrived files",
-    config=RunConfig()
+    config=RunConfig(
+        ops={
+            "send_notification": {
+                "config": {
+                    "message": "File processing completed",
+                    "priority": "info"
+                }
+            }
+        }
+    )
 )
 def file_processing_job():
     """Job triggered by file arrival sensor"""
@@ -361,7 +399,16 @@ def file_processing_job():
 @job(
     name="cross_partition_reconciliation",
     description="Reconcile data across completed partitions", 
-    config=RunConfig()
+    config=RunConfig(
+        ops={
+            "send_notification": {
+                "config": {
+                    "message": "Partition reconciliation completed",
+                    "priority": "info"
+                }
+            }
+        }
+    )
 )
 def cross_partition_reconciliation_job():
     """Job for partition reconciliation"""
@@ -372,7 +419,16 @@ def cross_partition_reconciliation_job():
 @job(
     name="business_hours_processing",
     description="Process high-priority items during business hours",
-    config=RunConfig()
+    config=RunConfig(
+        ops={
+            "send_notification": {
+                "config": {
+                    "message": "Business hours processing completed",
+                    "priority": "high"
+                }
+            }
+        }
+    )
 )
 def business_hours_processing_job():
     """Job for business hours processing"""
@@ -382,7 +438,16 @@ def business_hours_processing_job():
 @job(
     name="analytics_refresh",
     description="Refresh analytics dashboards and reports",
-    config=RunConfig()
+    config=RunConfig(
+        ops={
+            "send_notification": {
+                "config": {
+                    "message": "Analytics refresh completed",
+                    "priority": "info"
+                }
+            }
+        }
+    )
 )
 def analytics_refresh_job():
     """Job to refresh analytics"""
@@ -446,7 +511,16 @@ def configurable_alert_sensor(context: SensorEvaluationContext, config: AlertCon
 @job(
     name="configurable_alert_job",
     description="Handle configurable alerts",
-    config=RunConfig()
+    config=RunConfig(
+        ops={
+            "send_notification": {
+                "config": {
+                    "message": "Alert handled successfully",
+                    "priority": "high"
+                }
+            }
+        }
+    )
 )
 def configurable_alert_job():
     """Job for configurable alerts"""

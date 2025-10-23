@@ -40,16 +40,6 @@ Features demonstrated:
 - Comprehensive backfill strategies
 """
 
-from dagster_quickstart.defs.serverless_definitions import (
-    serverless_definitions as defs,
-    asset_focused_definitions,
-    automation_focused_definitions, 
-    observability_focused_definitions
-)
+from dagster_quickstart.defs.serverless_definitions import defs
 
-__all__ = [
-    "defs",
-    "asset_focused_definitions", 
-    "automation_focused_definitions",
-    "observability_focused_definitions"
-]
+__all__ = ["defs"]

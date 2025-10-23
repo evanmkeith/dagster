@@ -47,7 +47,7 @@ from .jobs import (
 from .partitions_backfill import (
     daily_backfill_job, multi_dimensional_backfill_job, 
     static_backfill_job, full_backfill_job,
-    daily_processing_schedule, weekly_batch_schedule
+    daily_processing_schedule
 )
 
 # Import all jobs from schedules_sensors
@@ -99,7 +99,7 @@ all_asset_checks = [
 # Collect all schedules
 all_schedules = [
     daily_data_refresh_schedule, monthly_reporting_schedule,
-    daily_sales_schedule, daily_processing_schedule, weekly_batch_schedule
+    daily_sales_schedule, daily_processing_schedule
 ]
 
 # Collect all sensors  
@@ -144,8 +144,8 @@ all_resources = {
     "enhanced_slack": enhanced_slack,
 }
 
-# Main definitions
-serverless_definitions = Definitions(
+# Main definitions - single Definitions object for dg dev compatibility
+defs = Definitions(
     assets=all_assets,
     asset_checks=all_asset_checks,
     schedules=all_schedules,
@@ -153,31 +153,3 @@ serverless_definitions = Definitions(
     jobs=all_jobs,
     resources=all_resources
 )
-
-# For convenience, create focused definition subsets
-asset_focused_definitions = Definitions(
-    assets=all_assets,
-    asset_checks=all_asset_checks,
-    resources=all_resources
-)
-
-automation_focused_definitions = Definitions(
-    assets=all_assets,
-    schedules=all_schedules,
-    sensors=all_sensors,
-    jobs=all_jobs,
-    resources=all_resources
-)
-
-observability_focused_definitions = Definitions(
-    assets=[
-        data_quality_metrics, pipeline_performance_metrics,
-        customer_engagement_metrics, partition_health_monitor
-    ],
-    asset_checks=all_asset_checks,
-    sensors=[data_quality_sensor, analytics_refresh_sensor],
-    resources=all_resources
-)
-
-# Export for main __init__.py
-defs = serverless_definitions

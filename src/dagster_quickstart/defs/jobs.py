@@ -52,11 +52,11 @@ analytics_job = define_asset_job(
     description="Generate customer and order analytics"
 )
 
-# End-to-end pipeline job
+# End-to-end pipeline job (non-partitioned assets only)
 full_pipeline_job = define_asset_job(
     name="full_pipeline",
-    selection="*",  # Select all assets
-    description="Complete data pipeline from ingestion to reporting"
+    selection=[raw_customers, raw_orders, clean_customers, clean_orders, analytics_metrics],
+    description="Complete data pipeline from ingestion to analytics (non-partitioned)"
 )
 
 
@@ -88,11 +88,11 @@ department_job = define_asset_job(
     description="Calculate KPIs for each business unit"
 )
 
-# Multi-partition backfill job
+# Daily backfill job (single partition type)
 backfill_job = define_asset_job(
     name="backfill_historical_data",
-    selection=[daily_sales, hourly_traffic],
-    description="Backfill historical data across multiple partitions"
+    selection=[daily_sales],
+    description="Backfill historical daily sales data across partitions"
 )
 
 
