@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw_data
+    tables:
+      - name: customers
+        columns:
+          - name: id
+          - name: name
+      - name: orders
+        columns:
+          - name: id
+          - name: customer_id
+
+models:
+  - name: customer_orders
+    description: "A model joining customers and orders"

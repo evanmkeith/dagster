@@ -3,12 +3,15 @@ name = "dagster_quickstart"
 requires-python = ">=3.9,<3.14"
 version = "0.1.0"
 dependencies = [
-    "dagster==1.11.13",
+    "dagster==1.11.15",
     "pandas>=2.3.2",
-    "dagster-cloud>=1.11.13",
-    "dagster-webserver>=1.11.13",
-    "dagster-dg-cli>=1.11.13",
+    "dagster-cloud==1.11.15",
+    "dagster-webserver==1.11.15",
+    "dagster-dg-cli==1.11.15",
     "dagster-duckdb>=0.27.13",
+    "dagster-dbt>=0.27.15",
+    "dbt-core>=1.10.13",
+    "dbt-duckdb>=1.9.6",
 ]
 
 [dependency-groups]

@@ -41,18 +41,3 @@ def my_graph_asset():
     return fan_in(processed_output.collect())
 
 
-broken_assets_job = define_asset_job(
-    name="my_graph_asset_job",
-    selection=[my_graph_asset],
-    config=RunConfig(
-        ops={
-            "my_graph_asset": {
-                "ops": {
-                    "fan_out_asset": FanOutConfig(value=1),
-                    "process_asset": ProcessAssetConfig(value=1),
-                    "fan_in_asset": FanInConfig(value=1),
-                }
-            },
-        }
-    ),
-)
